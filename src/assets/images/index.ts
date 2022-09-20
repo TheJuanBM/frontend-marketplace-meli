@@ -1,3 +1,3 @@
-import Logo from "./logo-meli.png";
+import LogoMELI from "./logo-meli.png";
 
-export { Logo };
+export { LogoMELI };

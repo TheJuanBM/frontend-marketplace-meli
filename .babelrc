@@ -1,4 +1,25 @@
 {
   "presets": ["next/babel"],
-  "plugins": [["styled-components", { "ssr": true }]]
+  "plugins": [
+    ["styled-components", { "ssr": true }],
+    [
+      "babel-plugin-root-import",
+      {
+        "alias": [
+          {
+            "rootPathSuffix": "./src/assets",
+            "rootPathPrefix": "_assets"
+          },
+          {
+            "rootPathSuffix": "./src/components",
+            "rootPathPrefix": "_components"
+          },
+          {
+            "rootPathSuffix": "./src/layouts",
+            "rootPathPrefix": "_layouts"
+          }
+        ]
+      }
+    ]
+  ]
 }

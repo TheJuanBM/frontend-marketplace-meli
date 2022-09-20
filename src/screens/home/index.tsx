@@ -1,9 +1,9 @@
-import { Header } from "../../components/header/index";
+import { Header } from "_components";
 
 export function HomeScreen() {
   return (
-    <main>
+    <>
       <Header />
-    </main>
+    </>
   );
 }
