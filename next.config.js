@@ -8,12 +8,10 @@ const nextConfig = {
     defaultLocale: "es",
   },
   images: {
-    domains: ["http://http2.mlstatic.com"],
+    domains: ["http://http2.mlstatic.com", "https://http2.mlstatic.com"],
     remotePatterns: [
-      {
-        protocol: "http",
-        hostname: "http2.mlstatic.com",
-      },
+      { protocol: "http", hostname: "http2.mlstatic.com" },
+      { protocol: "https", hostname: "http2.mlstatic.com" },
     ],
   },
   webpack(config) {

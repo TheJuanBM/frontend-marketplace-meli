@@ -1,9 +1,25 @@
-import { useRouter } from "next/router";
+import { ResponseItemDetail } from "../../src/interfaces";
+import { DetailLayout } from "../../src/layouts";
+import { Detail } from "../../src/screens";
 
-export default function DetaildItem() {
-  const { query } = useRouter();
+export default function DetaildItem({ data }) {
+  return (
+    <DetailLayout title={data.title}>
+      <Detail {...data} />
+    </DetailLayout>
+  );
+}
 
-  const { id } = query;
+export async function getServerSideProps({ params }) {
+  const response = await fetch(
+    `https://one-server-marketplace-meli.herokuapp.com/api/items/${params.id}`
+  );
 
-  return <div>{id}</div>;
+  const data = (await response.json()) as ResponseItemDetail;
+
+  return {
+    props: {
+      data: data.item,
+    },
+  };
 }
