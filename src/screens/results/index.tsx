@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Header } from "_components";
 import { Response } from "_interfaces";
 

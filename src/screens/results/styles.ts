@@ -3,11 +3,13 @@ import { colors } from "_assets";
 
 export const WrapperResult = styled.div`
   display: flex;
+  overflow: hidden;
   align-items: center;
   flex-direction: column;
 `;
 
 export const SectionItems = styled.section`
+  width: 100%;
   max-width: 1200px;
   flex-direction: column;
 

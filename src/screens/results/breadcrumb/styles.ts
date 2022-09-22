@@ -14,13 +14,15 @@ export const Container = styled.div`
     color: ${colors.GRAYS[300]};
 
     > li {
-      ::after {
-        content: ">";
-        padding: 0 10px;
+      display: flex;
+      align-items: center;
+
+      &:last-child > svg {
+        display: none;
       }
 
-      :last-child::after {
-        content: none;
+      > svg {
+        padding: 0 10px;
       }
     }
 

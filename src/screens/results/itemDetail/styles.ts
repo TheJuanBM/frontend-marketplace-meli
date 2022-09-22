@@ -2,15 +2,13 @@ import styled from "styled-components";
 import { colors } from "_assets";
 
 export const Container = styled.li`
-  margin: 16px;
+  padding: 16px;
   display: flex;
   flex-direction: row;
-  padding-bottom: 16px;
 
   > div {
+    width: 85%;
     display: flex;
-    min-width: 85%;
-    max-width: 85%;
     flex-direction: row;
 
     > div {
@@ -46,8 +44,8 @@ export const Container = styled.li`
             margin-bottom: 32px;
 
             &:nth-child(2) {
-              width: 30px;
-              height: 30px;
+              width: 25px;
+              height: 25px;
               display: flex;
               margin-left: 16px;
               border-radius: 50%;

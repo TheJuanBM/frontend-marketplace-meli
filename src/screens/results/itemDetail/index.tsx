@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { FreeShippingIcon } from "_assets";
 import { WrapperLink } from "_components";
 import { Item } from "_interfaces";
 
@@ -28,7 +29,11 @@ export function ItemDetail({ item }: ItemDetailProps) {
         <div>
           <div>
             <span>{`$${aroundMoney.toLocaleString("en-IN")}`}</span>
-            {item.free_shipping && <span title="Envío gratis"></span>}
+            {item.free_shipping && (
+              <span title="Envío gratis">
+                <FreeShippingIcon />
+              </span>
+            )}
           </div>
           <ItemDetailStyles.TitleItem>
             <WrapperLink href={`items/${item.id}`} title={item.title}>

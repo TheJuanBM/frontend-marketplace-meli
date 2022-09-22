@@ -28,7 +28,7 @@ export async function getServerSideProps({ query }: GetServerSidePropsParams) {
   return {
     props: {
       items: response.items,
-      categories: response.categories,
+      categories: response.categories ?? [],
     },
   };
 }
