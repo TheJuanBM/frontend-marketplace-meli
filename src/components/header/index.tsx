@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { LogoMELI } from "_assets";
-import { Search } from "../search";
 
+import { LogoMELI } from "_assets";
+
+import { Search } from "../search";
 import * as HeaderStyles from "./styles";
 
 export function Header() {
@@ -10,7 +11,7 @@ export function Header() {
     <HeaderStyles.Container>
       <div>
         <Link href="/">
-          <a>
+          <a tabIndex={4}>
             <Image src={LogoMELI} height="32px" width="44px" alt="Logo" />
           </a>
         </Link>

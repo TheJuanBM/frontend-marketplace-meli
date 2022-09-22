@@ -17,6 +17,10 @@
           {
             "rootPathSuffix": "./src/layouts",
             "rootPathPrefix": "_layouts"
+          },
+          {
+            "rootPathSuffix": "./src/interfaces",
+            "rootPathPrefix": "_interfaces"
           }
         ]
       }

@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import { colors } from "../../assets";
+import { colors } from "_assets";
 
 export const Container = styled.header`
   display: flex;
   padding: 16px;
+  align-items: center;
   justify-content: center;
   background-color: ${colors.YELLOW};
 
@@ -12,6 +13,6 @@ export const Container = styled.header`
     width: 1200px;
     column-gap: 16px;
     align-items: center;
-    grid-template-columns: 100px auto 100px;
+    grid-template-columns: 50px auto;
   }
 `;

@@ -10,6 +10,7 @@ export const Container = styled.form`
     padding: 0 10px;
     border-radius: 2px;
     font-family: inherit;
+    width: -webkit-fill-available;
 
     &:focus {
       outline: none;

@@ -2,6 +2,10 @@ const YELLOW = "#FFE600";
 
 const BLUE = "#3483FA";
 
+const WHITE = "#FFFFFF";
+
+const GREEN = "#00FF00";
+
 const GRAYS = {
   "900": "#333333",
   "700": "#777777",
@@ -12,5 +16,7 @@ const GRAYS = {
 export const colors = {
   YELLOW,
   BLUE,
+  WHITE,
+  GREEN,
   GRAYS,
 };
