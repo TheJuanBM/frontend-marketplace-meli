@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { Response } from "../../src/interfaces";
-import { ResultLayout } from "../../src/layouts";
+import { LayoutApp } from "../../src/layouts/layoutApp";
 import { Results } from "../../src/screens";
 
 export default function SearchPage(response: Response) {
@@ -8,9 +8,12 @@ export default function SearchPage(response: Response) {
   const { search } = query;
 
   return (
-    <ResultLayout search={search}>
+    <LayoutApp
+      metaContent={`Resultado de busqueda para ${search}`}
+      title={`${search[0].toUpperCase() + search.slice(1)} | MELI 📦`}
+    >
       <Results {...response} />
-    </ResultLayout>
+    </LayoutApp>
   );
 }
 

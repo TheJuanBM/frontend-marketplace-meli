@@ -1,3 +1,1 @@
-export * from "./detailLayout";
-export * from "./homeLayout";
-export * from "./resultLayout";
+export * from "./layoutApp";

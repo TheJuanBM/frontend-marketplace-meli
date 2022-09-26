@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { colors } from "_assets";
 
 export const Container = styled.li`
-  padding: 16px;
   display: flex;
   flex-direction: row;
 

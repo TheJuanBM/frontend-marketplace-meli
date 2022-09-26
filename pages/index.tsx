@@ -1,9 +1,17 @@
 import React from "react";
-import { HomeLayout } from "../src/layouts/homeLayout";
-import { HomeScreen } from "../src/screens";
+
+import { LayoutApp } from "_layouts";
+import { HomeScreen } from "_screens";
 
 export default function Home() {
   return <HomeScreen />;
 }
 
-Home.getLayout = (page: React.ReactNode) => <HomeLayout>{page}</HomeLayout>;
+Home.getLayout = (page: React.ReactNode) => (
+  <LayoutApp
+    title="MELI | Encuentra tu producto"
+    metaContent="Busca, encuentra y compra tu producto ideal con MELI"
+  >
+    {page}
+  </LayoutApp>
+);

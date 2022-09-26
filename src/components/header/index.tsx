@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import styled from "styled-components";
 
-import { LogoMELI } from "_assets";
+import { colors, LogoMELI } from "_assets";
 
 import { Search } from "../search";
-import * as HeaderStyles from "./styles";
 
 export function Header() {
   return (
-    <HeaderStyles.Container>
+    <Header.Element>
       <div>
         <Link href="/">
           <a tabIndex={4}>
@@ -17,6 +17,22 @@ export function Header() {
         </Link>
         <Search />
       </div>
-    </HeaderStyles.Container>
+    </Header.Element>
   );
 }
+
+Header.Element = styled.header`
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  justify-content: center;
+  background-color: ${colors.YELLOW};
+
+  div {
+    display: grid;
+    width: 1200px;
+    column-gap: 16px;
+    align-items: center;
+    grid-template-columns: 50px auto;
+  }
+`;

@@ -1,12 +1,12 @@
-import { ResponseItemDetail } from "../../src/interfaces";
-import { DetailLayout } from "../../src/layouts";
-import { Detail } from "../../src/screens";
+import { ResponseItemDetail } from "_interfaces";
+import { LayoutApp } from "_layouts";
+import { Detail } from "_screens";
 
 export default function DetaildItem({ data }) {
   return (
-    <DetailLayout title={data.title}>
+    <LayoutApp title={data.title} metaContent="Detalle del producto">
       <Detail {...data} />
-    </DetailLayout>
+    </LayoutApp>
   );
 }
 

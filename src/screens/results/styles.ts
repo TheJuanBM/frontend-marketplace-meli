@@ -8,25 +8,24 @@ export const WrapperResult = styled.div`
   flex-direction: column;
 `;
 
-export const SectionItems = styled.section`
-  width: 100%;
-  max-width: 1200px;
-  flex-direction: column;
+export const OrderedLlistResult = styled.ol`
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 2px;
+  list-style-type: none;
 
-  > ol {
-    padding: 0;
-    margin: 16px 0;
-    overflow: hidden;
-    border-radius: 2px;
-    list-style-type: none;
-    background-color: ${colors.WHITE};
+  > li {
+    padding: 16px 0;
+    border-bottom: solid ${colors.GRAYS[100]} 1px;
 
-    > li {
-      border-bottom: solid ${colors.GRAYS[100]} 1px;
+    &:first-child {
+      padding-top: 0;
+    }
 
-      &:last-child {
-        border-bottom: none;
-      }
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
     }
   }
 `;

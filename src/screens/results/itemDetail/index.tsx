@@ -4,6 +4,7 @@ import { FreeShippingIcon } from "_assets";
 import { WrapperLink } from "_components";
 import { Item } from "_interfaces";
 
+import { priceFormat } from "_helpers";
 import * as ItemDetailStyles from "./styles";
 
 interface ItemDetailProps {
@@ -28,7 +29,7 @@ export function ItemDetail({ item }: ItemDetailProps) {
         </div>
         <div>
           <div>
-            <span>{`$${aroundMoney.toLocaleString("en-IN")}`}</span>
+            <span>{priceFormat(item.price.amount).format}</span>
             {item.free_shipping && (
               <span title="Envío gratis">
                 <FreeShippingIcon />

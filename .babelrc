@@ -21,6 +21,10 @@
           {
             "rootPathSuffix": "./src/interfaces",
             "rootPathPrefix": "_interfaces"
+          },
+          {
+            "rootPathSuffix": "./src/helpers",
+            "rootPathPrefix": "_helpers"
           }
         ]
       }

@@ -19,7 +19,8 @@
       "_components": ["./src/components"],
       "_screens": ["./src/screens"],
       "_layouts": ["./src/layouts"],
-      "_interfaces": ["./src/interfaces"]
+      "_interfaces": ["./src/interfaces"],
+      "_helpers": ["./src/helpers"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
