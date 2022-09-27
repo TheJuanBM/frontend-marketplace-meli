@@ -25,6 +25,10 @@
           {
             "rootPathSuffix": "./src/helpers",
             "rootPathPrefix": "_helpers"
+          },
+          {
+            "rootPathSuffix": "./src/hooks",
+            "rootPathPrefix": "_hooks"
           }
         ]
       }

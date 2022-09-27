@@ -20,7 +20,8 @@
       "_screens": ["./src/screens"],
       "_layouts": ["./src/layouts"],
       "_interfaces": ["./src/interfaces"],
-      "_helpers": ["./src/helpers"]
+      "_helpers": ["./src/helpers"],
+      "_hooks": ["./src/hooks"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

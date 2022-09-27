@@ -1,9 +1,14 @@
-import styled from "styled-components";
-import { colors } from "_assets";
+import { MagnifyingGlassIcon } from "_assets";
+import { useSearch } from "_hooks";
+import { useSearchFormController } from "./hooks";
+import * as SearchStyles from "./styles";
 
 export function Search() {
+  const search = useSearch();
+  const form = useSearchFormController(search.handleSearch);
+
   return (
-    <Search.Element action="/items/">
+    <SearchStyles.Container onSubmit={form.handleSubmit}>
       <input
         autoFocus
         type="text"
@@ -18,28 +23,11 @@ export function Search() {
         aria-activedescendant=""
         placeholder="Nunca dejes de buscar"
         aria-label="Ingresa lo que quieras encontrar"
+        onChange={form.handleChange}
       />
-    </Search.Element>
+      <button title="Buscar" type="submit" tabIndex={2}>
+        <MagnifyingGlassIcon />
+      </button>
+    </SearchStyles.Container>
   );
 }
-
-Search.Element = styled.form`
-  input {
-    width: 100%;
-    height: 32px;
-    border: none;
-    font-size: 14px;
-    padding: 0 10px;
-    border-radius: 2px;
-    font-family: inherit;
-    width: -webkit-fill-available;
-
-    &:focus {
-      outline: none;
-    }
-
-    &::placeholder {
-      color: ${colors.GRAYS[300]};
-    }
-  }
-`;
